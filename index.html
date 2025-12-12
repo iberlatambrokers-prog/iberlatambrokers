@@ -1,11 +1,196 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>IberLatam Brokers</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IberLatam Brokers | Maquinaria España - Colombia</title>
+    <style>
+        /* Reset básico */
+        * { margin:0; padding:0; box-sizing:border-box; }
+        body { font-family: Arial, sans-serif; background: #f6f6f6; color: #222; }
+
+        /* Header */
+        header {
+            background: #1f3b63;
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+        }
+        header h1 { font-size: 32px; margin-bottom: 10px; }
+        header p { font-size: 18px; }
+
+        /* Navbar */
+        nav {
+            background: #14263f;
+            display: flex;
+            justify-content: center;
+            padding: 12px 0;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 0 15px;
+            transition: color 0.3s;
+        }
+        nav a:hover { color: #ffcc00; }
+
+        /* Secciones */
+        .section {
+            max-width: 1000px;
+            margin: 30px auto;
+            background: white;
+            padding: 40px 20px;
+            border-radius: 8px;
+        }
+        h2 { color: #1f3b63; margin-bottom: 20px; }
+
+        /* Servicios */
+        .services { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+        .card { background: #e9edf4; padding: 20px; border-radius: 8px; text-align: center; }
+        .card h3 { margin-bottom: 12px; }
+
+        /* Catálogo */
+        .catalog { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px,1fr)); gap: 20px; }
+        .product {
+            background: #f2f5fa;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+            transition: transform 0.2s;
+        }
+        .product:hover { transform: scale(1.03); }
+        .product img { width: 100%; border-radius: 5px; }
+        .product h4 { margin: 10px 0; color: #1f3b63; }
+
+        /* Formulario contacto */
+        form { display: flex; flex-direction: column; }
+        form input, form textarea {
+            padding: 12px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+        }
+        form button {
+            background: #1f3b63;
+            color: white;
+            border: none;
+            padding: 12px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        form button:hover { background: #0f1f34; }
+
+        /* Botón */
+        .btn {
+            display: inline-block;
+            margin-top: 15px;
+            background: #1f3b63;
+            color: white;
+            padding: 12px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* Footer */
+        footer {
+            background: #1f3b63;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+
+        /* Responsive */
+        @media(max-width: 768px) { .services { grid-template-columns: 1fr; } }
+    </style>
 </head>
 <body>
-  <h1>Bienvenidos a IberLatam Brokers</h1>
-  <p>Esta es la página oficial de nuestra empresa.</p>
+
+<header>
+    <h1>IberLatam Brokers</h1>
+    <p>Conectando maquinaria europea con oportunidades en Colombia</p>
+    <!-- Logo generado -->
+    <img src="https://via.placeholder.com/150x50?text=IberLatam+Brokers" alt="Logo IberLatam" style="margin-top:15px;">
+</header>
+
+<nav>
+    <a href="#servicios">Servicios</a>
+    <a href="#maquinaria">Maquinaria</a>
+    <a href="#contacto">Contacto</a>
+</nav>
+
+<!-- Sobre nosotros -->
+<div class="section" id="inicio">
+    <h2>¿Quiénes somos?</h2>
+    <p>
+        IberLatam Brokers es una firma especializada en la intermediación de maquinaria usada entre España y Colombia. 
+        Conectamos empresas españolas con compradores colombianos, proporcionando verificación técnica, negociación 
+        transparente y acompañamiento profesional durante todo el proceso.
+    </p>
+</div>
+
+<!-- Servicios -->
+<div class="section" id="servicios">
+    <h2>Nuestros Servicios</h2>
+    <div class="services">
+        <div class="card">
+            <h3>Intermediación Comercial</h3>
+            <p>Conectamos maquinaria real con compradores verificados en Colombia.</p>
+        </div>
+        <div class="card">
+            <h3>Verificación Técnica</h3>
+            <p>Solicitamos videos, informes, historial y datos reales del equipo.</p>
+        </div>
+        <div class="card">
+            <h3>Asesoría en Importación</h3>
+            <p>Cálculo de aranceles, costos y procesos logísticos España–Colombia.</p>
+        </div>
+    </div>
+</div>
+
+<!-- Catálogo de maquinaria -->
+<div class="section" id="maquinaria">
+    <h2>Maquinaria Disponible</h2>
+    <div class="catalog">
+        <div class="product">
+            <img src="https://via.placeholder.com/300x200?text=Excavadora+JCB" alt="Excavadora">
+            <h4>Excavadora JCB</h4>
+            <p>Segunda mano, en excelente estado, lista para exportación.</p>
+        </div>
+        <div class="product">
+            <img src="https://via.placeholder.com/300x200?text=Tractor+New+Holland" alt="Tractor">
+            <h4>Tractor New Holland</h4>
+            <p>Ideal para el sector agrícola, con garantía de origen.</p>
+        </div>
+        <div class="product">
+            <img src="https://via.placeholder.com/300x200?text=Plataforma+Elevadora" alt="Plataforma">
+            <h4>Plataforma Elevadora</h4>
+            <p>Perfecta para construcción y mantenimiento industrial.</p>
+        </div>
+    </div>
+</div>
+
+<!-- Contacto -->
+<div class="section" id="contacto">
+    <h2>Contacto</h2>
+    <p>¿Quieres comprar o vender maquinaria? Contáctanos:</p>
+    <form action="https://formsubmit.co/tuemail@example.com" method="POST" target="_blank">
+        <input type="text" name="name" placeholder="Nombre completo" required>
+        <input type="email" name="email" placeholder="Correo electrónico" required>
+        <textarea name="message" rows="5" placeholder="Mensaje" required></textarea>
+        <button type="submit">Enviar mensaje</button>
+    </form>
+    <p>También puedes enviarnos un mensaje directo por WhatsApp:</p>
+    <a href="https://wa.me/573XXXXXXXXX" class="btn">Enviar WhatsApp</a>
+</div>
+
+<footer>
+    <p>IberLatam Brokers © 2025 – Conectando continentes</p>
+</footer>
+
 </body>
 </html>

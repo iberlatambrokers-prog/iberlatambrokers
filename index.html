@@ -13,11 +13,18 @@
         header {
             background: #1f3b63;
             color: white;
-            text-align: center;
-            padding: 30px 20px;
+            padding: 20px;
         }
-        header h1 { font-size: 32px; margin-bottom: 10px; }
-        header p { font-size: 18px; }
+        header .header-container {
+            max-width: 1100px;
+            margin: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+        }
+        header h1 { font-size: 32px; margin: 0; }
+        header p { font-size: 18px; margin: 5px 0 0 0; }
 
         /* Navbar */
         nav {
@@ -105,19 +112,31 @@
         }
 
         /* Responsive */
-        @media(max-width: 768px) { .services { grid-template-columns: 1fr; } }
+        @media(max-width: 768px) {
+            header .header-container {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
     </style>
 </head>
 <body>
 
 <header>
-    <h1>IberLatam Brokers</h1>
-    <p>Conectando maquinaria europea con oportunidades en Colombia</p>
+    <div class="header-container">
 
-    <!-- Logo REAL -->
-    <img src="Intermediacion de maquinaria Logo - IberLatam Brokers - copia.png" 
-         alt="Logo IberLatam" 
-         style="margin-top:15px; width:200px;">
+        <!-- LOGO A LA IZQUIERDA -->
+        <img src="Intermediacion de maquinaria Logo - IberLatam Brokers - copia.png"
+             alt="Logo IberLatam"
+             style="width:130px; height:auto;">
+
+        <!-- TEXTO CENTRADO -->
+        <div style="text-align:center;">
+            <h1>IberLatam Brokers</h1>
+            <p>Conectando maquinaria europea con oportunidades en Colombia</p>
+        </div>
+
+    </div>
 </header>
 
 <nav>
@@ -146,7 +165,7 @@
         </div>
         <div class="card">
             <h3>Verificación Técnica</h3>
-            <p>Solicitamos videos, informes, historial y datos reales del equipo.</p>
+            <p>Solicitamos videos, informes, historial y datos reales del equipo。</p>
         </div>
         <div class="card">
             <h3>Asesoría en Importación</h3>
@@ -155,7 +174,7 @@
     </div>
 </div>
 
-<!-- Catálogo de maquinaria -->
+<!-- Catálogo -->
 <div class="section" id="maquinaria">
     <h2>Maquinaria Disponible</h2>
     <div class="catalog">
@@ -181,14 +200,14 @@
 <div class="section" id="contacto">
     <h2>Contacto</h2>
     <p>¿Quieres comprar o vender maquinaria? Contáctanos:</p>
-    <form action="https://formsubmit.co/tuemail@example.com" method="POST" target="_blank">
+    <form>
         <input type="text" name="name" placeholder="Nombre completo" required>
         <input type="email" name="email" placeholder="Correo electrónico" required>
         <textarea name="message" rows="5" placeholder="Mensaje" required></textarea>
         <button type="submit">Enviar mensaje</button>
     </form>
     <p>También puedes enviarnos un mensaje directo por WhatsApp:</p>
-    <a href="https://wa.me/573XXXXXXXXX" class="btn">Enviar WhatsApp</a>
+    <a class="btn">Enviar WhatsApp</a>
 </div>
 
 <footer>
